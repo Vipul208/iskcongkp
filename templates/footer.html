@@ -1,0 +1,154 @@
+{% load static %}
+
+<section>
+
+	<!--footer-->
+	<footer class="page-footer font-small pt-4 trans_300" style="background-color: #3e4551;">
+
+		<!-- Footer Links -->
+		<div class="container text-center text-md-left">
+
+			<!-- Grid row -->
+			<div class="row">
+
+				<hr class="clearfix w-100 d-md-none">
+
+				<!-- Grid column -->
+				<div class="col-md-2 mx-auto">
+
+					<!-- Links -->
+					<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Important Links</h5>
+
+					<ul class="list-unstyled">
+						<li><a href='#' target="_blank">Info Venues</a></li>
+						<li><a href='#' target="_blank">Guides</a></li>
+						<li><a href='#' target="_blank">Video</a></li>
+						<li><a href='#' target="_blank">Outreach</a></li>
+					</ul>
+
+				</div>
+				<!-- Grid column -->
+
+				<hr class="clearfix w-100 d-md-none">
+
+				<!-- Grid column -->
+				<div class="col-md-2 mx-auto">
+
+					<!-- Links -->
+					<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Resources </h5>
+
+					<ul class="list-unstyled">
+						<li><a href="#" target="_blank">E-Library</a></li>
+						<li><a href="#" target="_blank">Online Classes</a></li>
+						<li><a href="#" target="_blank">Free Workshop</a></li>
+					</ul>
+
+				</div>
+				<!-- Grid column -->
+
+				<hr class="clearfix w-100 d-md-none">
+
+				<!-- Grid column -->
+				<div class="col-md-2 mx-auto">
+
+					<!-- Links -->
+					<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Donate Us</h5>
+
+					<ul class="list-unstyled">
+						<li><a href="#" target="_blank">Bhagwat Gita</a></li>
+						<li><a href="#" target="_blank">Ekadashi Donation</a></li>
+						<li><a href="#" target="_blank">Youth Activities</a></li>
+						<li><a href="#" target="_blank">Food for life</a></li>
+						<li><a href="#" target="_blank">General Donation</a></li>
+					</ul>
+
+				</div>
+				<!-- Grid column -->
+
+
+				<!-- Grid column -->
+				<div class="col-md-3 mx-auto">
+
+					<!-- Content -->
+					<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Us</h5>
+					<p>Dev Villa 3/40, Bahar Cluster-3,
+						Sahara Estate, Deoria Bypass Rd,
+						Gorakhpur, Uttar Pradesh 273008
+						iskcongorakhpur53@gmail.com
+					</p>
+					<div class="APP">
+						<p class="text-center bold">Get the app.</p>
+						<div class="row d-flex justify-content-center">
+							<a class="z1VUo" href="https://play.google.com/store/apps/details?id=i">
+								<img alt="Available on Google Play" width="60%" height="80%"
+									src="{%static 'images/app_link.png' %}"></a>
+						</div>
+					</div>
+
+				</div>
+				<!-- Grid column -->
+
+			</div>
+			<!-- Grid row -->
+
+		</div>
+		<!-- Footer Links -->
+
+		<hr>
+		{% if not user.is_authenticated %}
+
+		<!-- Call to action -->
+		<ul class="list-unstyled list-inline text-center py-2">
+			<li class="list-inline-item">
+				<h5 class="mb-1">Register for free</h5>
+			</li>
+			<li class="list-inline-item">
+				<a href="{% url 'signup' %}" class="btn btn-danger btn-rounded">Sign up!</a>
+			</li>
+		</ul>
+		<!-- Call to action -->
+		{% endif %}
+		<hr>
+
+		<!-- Social buttons -->
+		<ul class="list-unstyled list-inline text-center">
+			<li class="list-inline-item">
+				<a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/share/13ym7ELbv6/?mibextid=qi2Omg" target="_blank">
+					<i class="fab fa-facebook-f"> </i>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a class="btn-floating btn-li mx-1" href="https://www.instagram.com/iskcon.gorakhpur?igsh=MWY5Nm45ZXoxOWV1dw=="
+					target="_blank">
+					<i class="fab fa-instagram"> </i>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a class="btn-floating btn-li mx-1" href="https://youtube.com/@iskcongorakhpur_official?si=2kM5BBxq1zy44kkJ"
+					target="_blank">
+					<i class="fab fa-youtube"> </i>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a class="btn-floating btn-tw mx-1" href="https://whatsapp.com/channel/0029VaAyUbbKGGGFIzYy271k" target="_blank">
+					<i class="fab fa-whatsapp"> </i>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a class="btn-floating btn-gmail mx-1" href="mailto:iskcongorakhpur53@gmail.com">
+					<i class="fa fa-envelope"> </i>
+				</a>
+			</li>
+		</ul>
+		<!-- Social buttons -->
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3">© 2024 Copyright:
+			<a href="{%static 'privacy policy-converted.pdf'%}" target="_blank" rel="noopner norefferer"> ISKCON Gorakhpur All Right
+				Reserved</a>
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
+</section>

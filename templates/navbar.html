@@ -1,0 +1,143 @@
+{%load static%}
+<!-- Header -->
+
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="header_content d-flex flex-row align-items-center justify-content-start">
+          <div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+            <img src="{% static 'images/logo.png' %}" alt="sr" width="50px" height="50px" class="img-fluid">
+            <div class="logo">
+              <a href="{% url 'home' %}">ISKCON GORAKHPUR</a>
+            </div>
+            <nav class="main_nav">
+              <ul class="d-flex flex-row align-items-start justify-content-start">
+                <li class="active">
+                  <a href="{% url 'home' %}"> <i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li>
+                  <a href="{% url 'about' %}"><i class="fa fa-info"></i> About</a>
+                </li>
+
+                <li>
+                  <a href="{% url 'events:home' %}"><i class="fas fa-puzzle-piece"></i>Events</a>
+                </li>
+                <li>
+                  <div class="menu_phone ml-auto">
+                  </div>
+                <li>
+
+                  {% if user.is_authenticated %}
+                  <a href="{% url 'account' %}">
+                    <i class="fas fa-user"></i>Hi {{user.username}}!</a>
+                  {% else %}
+                  <a href="{% url 'login' %}"><i class="fas fa-user  "></i>Login</a>
+                  {% endif %}
+                </li>
+              </ul>
+            </nav>
+
+            <!-- Hamburger -->
+
+            <div class="hamburger ml-auto ">
+              <img src="{% static 'images/square.png' %}" alt="sr" width="40px" height="40px"
+                class="img-fluid bg-light rounded-circle mt-3">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header_social d-flex flex-row align-items-center justify-content-start d-lg-none">
+    <ul class="d-flex flex-row align-items-start justify-content-start ">
+      <li class="">
+        <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/share/13ym7ELbv6/?mibextid=qi2Omg" target="_blank">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+      </li>
+      <!--<li>
+        <a class="btn-floating btn-tw mx-1" href="https://twitter.com/" target="_blank">
+          <i class="fab fa-youtube"> </i>
+        </a>
+      </li> -->
+      <li>
+        <a class="btn-floating btn-gmail mx-1" href="mailto:iskcongorakhpur53@gmail.com">
+          <i class="fa fa-envelope"> </i>
+        </a>
+      </li>
+      <li>
+        <a class="btn-floating btn-li mx-1" href="https://www.instagram.com/iskcon.gorakhpur?igsh=MWY5Nm45ZXoxOWV1dw=="
+          target="_blank">
+          <i class="fab fa-instagram"> </i>
+        </a>
+      </li>
+      <li>
+        <a class="btn-floating btn-dribbble mx-1" href="https://dscrecbijnor.blogspot.com/" target="_blank">
+          <i class="fas fa-blog"> </i></a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- Menu -->
+
+<div class="menu">
+  <div class="menu_header d-flex flex-row align-items-center justify-content-start px-4">
+    <div class="menu_logo"><a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="sr" width="50px"
+          height="50px" class="img-fluid">ISKCON GORAKHPUR</a></div>
+    <div class="menu_close_container ml-auto">
+      <div class="menu_close">
+        <img src="{% static 'images/add.png' %}" alt="sr" width="30px" height="30px" class="rounded-circle ">
+      </div>
+    </div>
+  </div>
+  <div class="menu_content">
+    <ul>
+      <li><a href="{% url 'about' %}"><i class="fa fa-info"></i> About</a></li>
+     
+      <li><a href="{% url 'events:home' %}"><i class="fas fa-puzzle-piece"></i>Events</a>
+      </li>
+      {% if user.is_authenticated %}
+      <p>Hi {{user.username}}!</p>
+      <li><a href="{% url 'logout' %}"><i class="fas fa-user"></i>Logout</a>
+      </li>
+      <li><a href="{% url 'account' %}"><i class="fas fa-cog"></i>Settings</a></li>
+      {% else %}
+      <li><a href="{% url 'login' %}"><i class="fas fa-user "></i>Login</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+  <div class="menu_social">
+    <div class="menu_phone ml-auto">Contact Us:</div>
+    <ul class="d-flex flex-row align-items-start justify-content-start">
+      <li>
+        <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/share/13ym7ELbv6/?mibextid=qi2Omg" target="_blank">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+      </li><!--
+      <li>
+        <a class="btn-floating btn-tw mx-1" href="https://twitter.com/" target="_blank">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>-->
+      <li>
+        <a class="btn-floating btn-gmail mx-1" href="mailto:iskcongorakhpur53@gmail.com">
+          <i class="fa fa-envelope"> </i>
+        </a>
+      </li>
+      <li>
+        <a class="btn-floating btn-li mx-1" href="https://www.instagram.com/iskcon.gorakhpur?igsh=MWY5Nm45ZXoxOWV1dw=="
+          target="_blank">
+          <i class="fab fa-instagram"> </i>
+        </a>
+      </li>
+      <li>
+        <a class="btn-floating btn-dribbble mx-1" href="https://dscrecbijnor.blogspot.com/" target="_blank">
+          <i class="fas fa-blog"> </i></a>
+      </li>
+    </ul>
+  </div>
+</div>
